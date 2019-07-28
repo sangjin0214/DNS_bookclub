@@ -37,7 +37,7 @@ instagram:
 # Jekyll Settings #
 ###################
 
-baseurl: ""
+baseurl: "DNS_bookclub"
 
 plugins: [jekyll-paginate]
 paginate: 3
