@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<!-- Main -->
+<div id="main">
+
+    <!-- Post -->
+    {% for post in paginator.posts %}
+    
+    <article class="post">
+        <header>
+            <div class="title">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <p>{{ post.subtitle }}</p>
+            </div>
+            <div class="meta">
+                <time class="published">{{ post.published }}</time>
+                <a href="#" class="author"><span class="name">{{ site.author }}</span><img src="{{ site.avatar }}" alt=""/></a>
+            </div>
+        </header>
+        <a href="{{ post.url }}" class="image featured"><img src="{{ post.thumbnail }}" alt=""/></a>
+        <p>{{ post.excerpt | truncate: 100, '...' | strip_newlines | strip_html }}</p>
+        <footer>
+            <ul class="actions">
+                <li><a href="{{ post.url }}" class="button large">Continue Reading</a></li>
+            </ul>
+        </footer>
+    </article>
+    {% endfor %}
+    
+    {% if paginator.total_pages > 1 %}
+    <ul class="actions pagination">
+        {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button large previous">Previous Page</a></li>
+        {% else %}
+        <li><a href="" class="disabled button large previous">Previous Page</a></li>
+        {% endif %}
+        
+        {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button large next">Next Page</a></li>
+        {% else %}
+        <li><a href="" class="disabled button large next">Next Page</a></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+</div>
+
+<!-- Sidebar -->
+<section id="sidebar">
+
+    <!-- Intro -->
+        <section id="intro">
+            <a href="#" class="logo"><img src="{{ site.logo }}" alt="" /></a>
+            <header>
+                <h2>{{ site.title }}</h2>
+                <p>{{ site.subtitle }}</p>
+            </header>
+        </section>
+
+    <!-- Mini Posts -->
+        <section>
+            <header>
+                <h2>On Session</h2>
+            </header>
+            <div class="mini-posts">
+                <article class="mini-post">
+                    <header>
+                        <h3><a href="single.html">{{ site.featured.title }}</a></h3>
+                        <h4 class="published">{{ site.featured.subtitle }}</h4>
+                        <p class="discription">{{ site.featured.discription }}<br/>
+                        <i>{{ site.featured.reference }}</i></p>
+                    </header>
+                    <img src="{{ site.featured.image }}" alt="" />
+                </article>             
+            </div>
+        </section>
+
+    <!-- Posts List -->
+    <!--
+        <section>
+            <header>
+                <h2>SNS</h2>
+            </header>
+            <ul class="posts">
+                <li>
+                    <article>
+
+                        <a class="twitter-timeline" 
+                           href="https://twitter.com/TwitterDev"
+                           data-chrome="nofooter"
+                           data-tweet-limit="3"></a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </article>
+                </li>
+            </ul>
+        </section>
+    -->
+
+    <!-- About -->
+        <section class="blurb">
+            <h2>About</h2>
+            <p>{{ site.description }}</p>
+            <ul class="actions">
+                <li><a href="single.html" class="button">Learn More</a></li>
+            </ul>
+        </section>
+
+    <!-- Footer -->
+        <section id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <p class="copyright">&copy; {{ site.title }}. Design: <a href="http://html5up.net">HTML5 UP</a>. Modified: <a href="mailto:{{ site.devel.email }}">{{ site.devel.name }}</a>.</p>
+        </section>
+    
+</section>

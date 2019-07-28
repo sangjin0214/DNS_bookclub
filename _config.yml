@@ -1,0 +1,70 @@
+#########
+# ABOUT #
+#########
+
+title: "지음"
+subtitle: "지음에 대한 한문장 설명"
+logo: "images/logo.jpg"
+description: >
+    지음은 매 달 책 한 권을 선정하여 <br/>
+    이를 주제로 함께 토론을 나누는 <br/>
+    자유로운 독서모임입니다. <br/>
+    <br/>
+    읽었던 책의 내용을 다른 분들과 나누고 싶으셨던 분! <br/>
+    심심하신 분! <br/>
+    할 거 없으신 분! <br/>
+    아무튼 ~~~~~~!@#$%^<br/>
+    <br/>
+    지음과 함께하고 싶으신가요? <br/>
+    아래 버튼을 클릭해주세요!
+
+###########
+# MEMBERS #
+###########
+
+author: 지음
+avatar: "images/avatar.jpg"
+
+#######
+# SNS #
+#######
+
+twitter:
+facebook:
+instagram:
+
+###################
+# Jekyll Settings #
+###################
+
+baseurl: ""
+
+plugins: [jekyll-paginate]
+paginate: 3
+paginate_path: "/page:num/"
+
+exclude: ["LICENSE.txt", "README.md", "Gemfile.lock", ".gitignore"]
+
+
+############
+# FEATURED #
+############
+
+featured:
+    title: "순수이성비판"
+    subtitle: "임마누엘 칸트"
+    image: "/images/featured.jpg"
+    discription: >
+        1781년 간행. 그의 비판철학의 첫번째 저서이며 철학의 역사에 한 시기를 이룩한 책이다. <br/>
+        이 책은 원리론과 방법론으로 나뉘었는데 원리론은 다시 선험적 감성론(先驗的感性論)·선험적 논리학으로 갈라졌다. <br/>
+        그리고 선험적 논리학은 또다시 선험적 분석론과 선험적 변증론으로 되어 있다. <br/>
+        칸트는 이 책에서 인간이성의 권한과 한계에 대하여 단적으로 질문하며, 학문으로서의 형이상학(形而上學)의 성립가능성을 묻는다. <br/>
+    reference: " - yes24 책 소개"
+    
+######
+# ME #
+######
+
+devel:
+    name: Kavka65535
+    email: kavka65535@gmail.com

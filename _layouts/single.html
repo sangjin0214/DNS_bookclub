@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    {% include head.html %}
+	<body class="is-preload">
+		<!-- Wrapper -->
+        <div id="wrapper">
+            {% include header.html %}
+            <!-- Main -->
+            <div id="main">
+                <!-- Post -->
+                <article class="post">
+                    <header>
+                        <div class="title">
+                            <h2><a href="">{{ page.title }}</a></h2>
+                            <p>{{ page.subtitle }}</p>
+                        </div>
+                        <div class="meta">
+                            <time class="published">{{ page.published }}</time>
+                            <a href="#" class="author"><span class="name">{{ page.author }}</span><img src="{{ page.avatar }}" alt="" /></a>
+                        </div>
+                    </header>
+                    <span class="image featured"><img src="{{ page.thumbnail }}" alt="" /></span>
+                    {{ content }}
+                    <footer>
+                        <ul class="stats">
+                            <li><a href="">#{{ page.tags }}</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            </div>
+        </div>
+        <!-- Footer -->
+        <section id="footer" style="text-align: center;">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <p class="copyright">&copy; {{ site.title }}. Design: <a href="http://html5up.net">HTML5 UP</a>. Modified: <a href="mailto:{{ site.devel.email }}">{{ site.devel.name }}</a>.</p>
+        </section>
+        {% include script.html %}
+	</body>
+</html>
